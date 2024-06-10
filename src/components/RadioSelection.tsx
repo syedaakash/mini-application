@@ -1,5 +1,5 @@
 import React from "react";
-import { UseDispatch, UseSelector, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
 import { setSelectedOption } from "../slices/radioSelectionSlice";
 
@@ -21,7 +21,6 @@ const RadioSelection: React.FC<RadioSelectionProps> = ({options}) => {
     }
     return(
     <div>
-        <h2 className="text-xl mb-4 font-bold">Radio Selector</h2>
         {options.map((option) => (
             <label key={option.value} className="block mb-2">
             <input 

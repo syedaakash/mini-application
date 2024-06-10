@@ -17,7 +17,6 @@ const  DiscountCodeEntry: React.FC<DiscountCodeEntryProps> = ({validCodes}) => {
 
     return (
         <div>
-            <h2 className="text-xl mb-4 font-bold">Discount Code Entry</h2>
             <input 
                 type="text"
                 value={code}

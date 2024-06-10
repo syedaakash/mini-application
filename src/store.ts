@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import radioSelectionReducer from "./slices/radioSelectionSlice"
+import noteReducer from "./slices/noteSlice"
 
 export const store = configureStore({
     reducer: {
-        radioSelection: radioSelectionReducer
+        radioSelection: radioSelectionReducer,
+        note: noteReducer,
     }
 })
 

@@ -3,6 +3,7 @@ import './App.css';
 import RadioSelection from './components/RadioSelection';
 import DiscountCodeEntry from './components/DiscountCodeEntry';
 import DiscountCodeGenerator from './components/DiscountCodeGenerator';
+import NoteField from './components/NoteField';
 
 const App: React.FC = () => {
   const options = [
@@ -15,9 +16,25 @@ const App: React.FC = () => {
   return (
     <div className='min-h-screen p-10 bg-gray-100 flex flex-col gap-10'>
       <h1 className='text-2xl font-bold mb-6 text-center'>Mini Application</h1>
-      <RadioSelection options={options}/>
-      <DiscountCodeEntry validCodes={validDiscountCodes}/>
-      <DiscountCodeGenerator />
+      <div>
+        <h2 className="text-xl mb-4 font-bold">Radio Selector</h2>
+        <RadioSelection options={options}/>
+      </div>
+
+      <div>
+        <h2 className="text-xl mb-4 font-bold">Generate Discount Code</h2>
+        <DiscountCodeEntry validCodes={validDiscountCodes}/>
+      </div>
+
+      <div>
+        <h2 className="text-xl mb-4 font-bold">Discount Code Entry</h2>
+        <DiscountCodeGenerator />
+      </div>
+
+      <div>
+        <h2 className="text-xl mb-4 font-bold">Notes</h2>
+        <NoteField />
+      </div>
     </div>
   )
 }
