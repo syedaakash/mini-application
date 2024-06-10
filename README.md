@@ -5,6 +5,7 @@ This is a mini-application developed using React for UI development, Redux for s
 - Radio Selection Buttons
 - Text Box for Discount Code Entry
 - Button to Simulate Discount Code Generation
+- Basic Note Field
 
 ## Getting Started
 
