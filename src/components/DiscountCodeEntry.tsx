@@ -1,6 +1,10 @@
 import React, {useState} from "react";
 
-const  DiscountCodeEntry: React.FC = () => {
+interface DiscountCodeEntryProps {
+    validCodes: string[];
+}
+
+const  DiscountCodeEntry: React.FC<DiscountCodeEntryProps> = ({validCodes}) => {
     const [code, setCode] = useState<string>('')
 
     const handleCodeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -8,8 +12,7 @@ const  DiscountCodeEntry: React.FC = () => {
     }
 
     const validateCode = () => {
-        const pattern = /^DISCOUNT2024$/
-        return pattern.test(code)
+        return validCodes.includes(code)
     }
 
     return (
