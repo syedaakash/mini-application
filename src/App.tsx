@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import RadioSelection from './components/RadioSelection';
+import DiscountCodeEntry from './components/DiscountCodeEntry';
 
-function App() {
+const App: React.FC = () => {
+  const options = [
+    { value: 'Option A', label: 'Option A' },
+    { value: 'Option B', label: 'Option B' },
+    { value: 'Option C', label: 'Option C' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='min-h-screen p-10 bg-gray-100 flex flex-col gap-10'>
+      <h1 className='text-2xl font-bold mb-6 text-center'>Mini Application</h1>
+      <RadioSelection options={options}/>
+        <DiscountCodeEntry />
     </div>
-  );
+  )
 }
 
 export default App;
