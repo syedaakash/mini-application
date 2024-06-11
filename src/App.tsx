@@ -22,12 +22,12 @@ const App: React.FC = () => {
       </div>
 
       <div>
-        <h2 className="text-xl mb-4 font-bold">Generate Discount Code</h2>
+        <h2 className="text-xl mb-4 font-bold">Discount Code Entry</h2>
         <DiscountCodeEntry validCodes={validDiscountCodes}/>
       </div>
 
       <div>
-        <h2 className="text-xl mb-4 font-bold">Discount Code Entry</h2>
+        <h2 className="text-xl mb-4 font-bold">Generate Discount Code</h2>
         <DiscountCodeGenerator />
       </div>
 
